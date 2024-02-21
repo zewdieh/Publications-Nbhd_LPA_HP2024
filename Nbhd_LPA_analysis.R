@@ -1,7 +1,28 @@
-# National residential typologies - LPA using US census tracts 
-# Hiwot Zewdie 
-# Last Modified: 01/2024
-# Published: 02/2024
+## ----------------------------------------------------------------------------
+##
+## Script name: Nbhd_LPA_analysis
+##
+## Purpose of script: R script corresponding to publication: 'A tale of many 
+## neighborhoods: Latent profile analysis to derive a national neighborhood 
+## typology for the US'
+##
+## Author: Hiwot Y. Zewdie
+##
+## Date Published: 02/2024 
+## 
+## Email: hzewdie@uw.edu
+##
+## ----------------------------------------------------------------------------
+##
+## Notes: This is the R script corresponding to publication: 'A tale of many 
+## neighborhoods: Latent profile analysis to derive a national neighborhood 
+## typology for the US' published in the journal Health & Place (2024). It 
+## contains the code used to prep ACS data for analysis and fit the latent  
+## profile models. This code has not been peer-reviewed. Questions and feedback 
+## always welcome: Hiwot Zewdie (hzewdie@uw.edu)
+##
+## ----------------------------------------------------------------------------
+
 
 #environment settings
 rm(list=ls())
@@ -15,7 +36,7 @@ library(MetBrewer)
 library(tidyverse)
 
 
-# Step 1: Pull select variables for all census tracts in the US 
+# Step 1: Pull select ACS variables for all census tracts in the US 
 ustracts <- NULL
 
 for(i in state.abb){
